@@ -5,7 +5,7 @@ import Author from "../Pages/Page1_Intro"
 import Navigation from "../Pages/Page2_Navigation";
 import Experience from "../Pages/Page3_Experience";
 import Resume from "../Pages/Page4_Resume";
-import SecondResume from "../Pages/Page5_Resume2";
+import TopSkills from "../Pages/Page5_TopSkills";
 import Project1 from "../Pages/Page6_Personal_Planner";
 import Project2 from "../Pages/Page7_PITCRU";
 import Game1 from "../Pages/Page8_Hangman";
@@ -35,7 +35,7 @@ export default function HomePage()
     const [eighthPageDisplayIndex, setEighthPageDisplayIndex] = useState(13);
     const waitTimeNext=1000; //Time to wait before changing z-index when going next page
     const waitTimePrev=1000; //Time to wait before changing z-index when going previous page
-    const [pageElements,setPageElements]= useState([<Author/>,<Navigation NavigatePage={NavigatePage} currentPage={currentPage}/>,<Experience/>,<Resume/>,<SecondResume/>,<Project1/>,<Project2/>,<Game1/>,<Personal/>])
+    const [pageElements,setPageElements]= useState([<Author/>,<Navigation NavigatePage={NavigatePage} currentPage={currentPage}/>,<Experience/>,<Resume/>,<TopSkills/>,<Project1/>,<Project2/>,<Game1/>,<Personal/>])
     
     function NavigatePage(PageNum)
     {

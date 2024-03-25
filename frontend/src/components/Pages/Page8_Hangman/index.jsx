@@ -6,7 +6,7 @@ export default function Game1()
         <>
             <div className="flex flex-col h-full w-full justify-start">
             <div className="pt-10 h-5/6 overflow-y-scroll">
-                    <a href="https://personalplanner-11519afe1d1f.herokuapp.com/" target="_blank">
+                    <a href="https://jschinel.github.io/hangman/" target="_blank">
                         <h1 className="text-2xl pb-5 bold underline">Hangman</h1>
                     </a>
                     <p className="flex pl-10">Description:</p>
@@ -19,7 +19,7 @@ export default function Game1()
                         <li className="pl-10 pr-10 text-left">DOM methodology</li>
                     <br />
                 </div>
-                <a className="bold text-2xl absolute bottom-20 left-5" href="https://github.com/jschinel/Capstone" target="_blank">GitHub Repo</a>
+                <a className="bold text-2xl absolute bottom-20 left-5" href="https://github.com/jschinel/hangman" target="_blank">GitHub Repo</a>
             </div>
         </>
     )

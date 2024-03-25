@@ -21,7 +21,11 @@ export default function Navigation({NavigatePage})
                 </div>
                 <div className="flex w-full justify-center items-center">
                     <li className=" pr-5 text-4xl text-center list-none hover:text-[#C19A6B] hover:cursor-pointer" onClick={()=>{NavigatePage(4)}}>Resume</li>
-                    <p className="text-lg">(Page 4-5)</p>                    
+                    <p className="text-lg">(Page 4)</p>                    
+                </div>
+                <div className="flex w-full justify-center items-center">
+                    <li className=" pr-5 text-4xl text-center list-none hover:text-[#C19A6B] hover:cursor-pointer" onClick={()=>{NavigatePage(5)}}>Skills & Certs</li>
+                    <p className="text-lg">(Page 5)</p>                    
                 </div>
                 <div className="flex w-full justify-center items-center">
                     <li className=" pr-5 text-4xl text-center list-none hover:text-[#C19A6B] hover:cursor-pointer" onClick={()=>{NavigatePage(6)}}>Projects</li>
