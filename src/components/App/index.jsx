@@ -45,6 +45,7 @@ export default function App() {
             </div>
             <Routes>
                 <Route path="/" element={<HomePage/>} />
+                <Route path="/jschinel.github.io/newPortfolio/" element={<HomePage/>} />
             </Routes>
         </>
     )
