@@ -259,7 +259,7 @@ export default function HomePage()
         <>
             <div className="flex">
                 <div className="flex flex-col justify-around h-[90dvh] mx-auto mt-5 text-center ">
-                <span className="text-6xl hover:cursor-pointer" onClick={getPrevPage}>&#11160;</span>
+                <span className="text-xl md:text-6xl hover:cursor-pointer" onClick={getPrevPage}>&#11160;</span>
                 </div>
                 <div className="relative flex flex-row justify-around border-4 border-black h-[90dvh] w-4/5 mx-auto mt-5 text-center rounded-lg">
                     <div className="absolute left-0 h-full bg-[#ffebcd] w-[50%] flex justify-center items-center">
@@ -303,13 +303,13 @@ export default function HomePage()
                         {<PageNum num={9}/>}
                     </div>
                     <div className={`absolute right-0 bg-[#ffebcd] normal`} style={{zIndex: 0}}>
-                        <h1 className="text-6xl pb-[150px]">THE END</h1>
+                        <h1 className="text-xl md:text-6xl pb-[15px] md:pb-[150px]">THE END</h1>
                         {pageElements[1]}
                         {<PageNum num={10}/>}
                     </div>
                 </div>
                 <div className="flex flex-col justify-around h-[90dvh] mx-auto mt-5 text-center align-middle">
-                    <span className="nextButton text-6xl hover:cursor-pointer" onClick={getNextPage}>&#11162;</span>
+                    <span className="nextButton text-xl md:text-6xl hover:cursor-pointer" onClick={getNextPage}>&#11162;</span>
                 </div>
             </div>
         </>

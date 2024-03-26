@@ -14,7 +14,7 @@ export default function PageNum({num})
                                 <img className=""src="/newPortfolio/GitHub.png"/>
                             </a>
                             <a  className="" href="/Jon_Schinella_Resume.pdf" target="_blank">
-                                <img className=""src="/newPortfolio/Resume.png"/>
+                                <img className=""src="/newPortfolio/Jon_Schinella_Resume.pdf"/>
                             </a>
                             <a className="pr-2" href="mailto:jonschinella@gmail.com">
                                 <img className="justify-self-end pr-2"src="/newPortfolio/Gmail.png"/>
