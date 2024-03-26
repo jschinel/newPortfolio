@@ -6,7 +6,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   // vite.config.js
-  base: './',
+  basename: './',
   plugins: [react()],
   root: path.resolve(__dirname, './'),
 })

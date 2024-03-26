@@ -7,7 +7,7 @@ import './index.css'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Router>
+  <Router basename="newPortfolio/">
     <App />
   </Router>,
 )
