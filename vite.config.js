@@ -9,12 +9,6 @@ export default defineConfig({
   root: path.resolve(__dirname, 'frontend'),
   server: {
       proxy: {
-          '/mongo': {
-              target: `http://localhost:${process.env.PORT}`,
-              changeOrigin: true,
-              secure: false,
-              ws: true,
-          }
       },
       watch: {
         usePolling: true
