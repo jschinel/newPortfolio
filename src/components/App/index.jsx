@@ -35,7 +35,7 @@ export default function App() {
                 </>  
                 ):null}
                 <div className='flex justify-between px-5 py-3 bg-[white] list-none text-black font-bold text-lg md:text-3xl sm:text-2xl'>
-                    <Link onClick= {()=>{setNoReload(false)}} to="/">
+                    <Link onClick= {()=>{setNoReload(false)}} to="/newPortfolio/">
                         <li className="hover:text-[#C19A6B]">Home</li>
                     </Link>
                     <Link onClick= {()=>{setToggleMenu(!toggleMenu)}} to="/newPortfolio/">
