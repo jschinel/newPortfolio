@@ -45,7 +45,7 @@ export default function App() {
             </div>
             <Routes>
                 <Route path="/" element={<HomePage/>} />
-                <Route path="/newPortfolio/" element={<HomePage/>} />
+                <Route path="/newPortfolio" element={<HomePage/>} />
             </Routes>
         </>
     )
