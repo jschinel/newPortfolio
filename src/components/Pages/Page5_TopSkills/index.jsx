@@ -21,28 +21,28 @@ export default function TopSkills()
                     <li className="pl-10 pr-10 text-left">Datasheet or Documentation Referencing</li>
                     {/* Certificates */}
                     <h1 className="flex pt-10 pl-10 pb-5">Certs:</h1>
-                    <a href="/Certs/GeneralAssembly.pdf" target="_blank" className="hover:text-blue-500">                    
+                    <a href="./public/Certs/GeneralAssembly.pdf" target="_blank" className="hover:text-blue-500">                    
                         <li className="pl-10 pr-10 text-left">General Assembly (SEI Course)</li>
                     </a>
-                    <a href="/Certs/EPLAN.pdf" target="_blank" className="hover:text-blue-500">                    
+                    <a href="./public/Certs/EPLAN.pdf" target="_blank" className="hover:text-blue-500">                    
                         <li className="pl-10 pr-10 text-left">E-Plan Certificate</li>
                     </a>
-                    <a href="/Certs/" target="_blank">                    
+                    <a href="./public/Certs/" target="_blank">                    
                         <li className="pl-10 pr-10 text-left">UL (Picture Coming Soon)</li>
                     </a>
-                    <a href="/Certs/" target="_blank">                    
+                    <a href="./public/Certs/" target="_blank">                    
                         <li className="pl-10 pr-10 text-left">Fanuc Level 1 (Picture Coming Soon)</li>
                     </a>
-                    <a href="/Certs/" target="_blank">                    
+                    <a href="./public/Certs/" target="_blank">                    
                         <li className="pl-10 pr-10 text-left">Fanuc Level 2 (Picture Coming Soon)</li>
                     </a>
-                    <a href="/Certs/Bachelor.png" target="_blank" className="hover:text-blue-500">                    
+                    <a href="./public/Certs/Bachelor.png" target="_blank" className="hover:text-blue-500">                    
                         <li className="pl-10 pr-10 text-left">Bachelors Degree</li>
                     </a>
-                    <a href="/Certs/Associates.png" target="_blank" className="hover:text-blue-500">                    
+                    <a href="./public/Certs/Associates.png" target="_blank" className="hover:text-blue-500">                    
                         <li className="pl-10 pr-10 text-left">Associates Degree</li>
                     </a>
-                    <a href="/Certs/HighSchool.png" target="_blank" className="hover:text-blue-500">                    
+                    <a href="./public/Certs/HighSchool.png" target="_blank" className="hover:text-blue-500">                    
                         <li className="pl-10 pr-10 text-left">HighSchool Diploma</li>
                     </a>
                 </div>
