@@ -8,16 +8,16 @@ export default function PageNum({num})
                     <div className="flex w-[50%] h-[30px] justify-end ">
                         <div className=" flex w-[50%] h-[26px] justify-end gap-3">
                             <a className="" href="https://www.linkedin.com/in/jon-schinella/" target="_blank">
-                                <img className=""src="./public/LinkedIn.png"/>
+                                <img className=""src="/newPortfolio/LinkedIn.png"/>
                             </a>
                             <a className="" href="https://github.com/jschinel" target="_blank">
-                                <img className=""src="./public/GitHub.png"/>
+                                <img className=""src="/newPortfolio/GitHub.png"/>
                             </a>
                             <a  className="" href="/Jon_Schinella_Resume.pdf" target="_blank">
-                                <img className=""src="./public/Resume.png"/>
+                                <img className=""src="/newPortfolio/Resume.png"/>
                             </a>
                             <a className="pr-2" href="mailto:jonschinella@gmail.com">
-                                <img className="justify-self-end pr-2"src="./public/Gmail.png"/>
+                                <img className="justify-self-end pr-2"src="/newPortfolio/Gmail.png"/>
                             </a> 
                         </div>
                     </div>
