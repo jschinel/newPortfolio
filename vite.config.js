@@ -5,13 +5,8 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // vite.config.js
+  base: './',
   plugins: [react()],
   root: path.resolve(__dirname, './'),
-  server: {
-      proxy: {
-      },
-      watch: {
-        usePolling: true
-      }
-  }
 })
