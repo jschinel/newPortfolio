@@ -38,7 +38,7 @@ export default function App() {
                     <Link onClick= {()=>{setNoReload(false)}} to="/">
                         <li className="hover:text-[#C19A6B]">Home</li>
                     </Link>
-                    <Link onClick= {()=>{setToggleMenu(!toggleMenu)}} to="/">
+                    <Link onClick= {()=>{setToggleMenu(!toggleMenu)}} to="/jschinel.github.io/newPortfolio/">
                         <li className="hover:text-[#C19A6B]"><span>&#9776;</span></li>
                     </Link>
                 </div>
