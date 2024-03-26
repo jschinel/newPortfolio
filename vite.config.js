@@ -6,9 +6,16 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  root: path.resolve(__dirname, 'frontend'),
+  root: path.resolve(__dirname, ''),
   server: {
       proxy: {
+
+          '/mongo': {
+              target: `http://localhost:${process.env.PORT}`,
+              changeOrigin: true,
+              secure: false,
+              ws: true,
+          }
       },
       watch: {
         usePolling: true
