@@ -1,5 +1,5 @@
 import { useEffect, useState} from "react"
-import { Routes, Route, Link, useNavigate} from "react-router-dom";
+import { Routes, Route, Link, useNavigate, Navigate} from "react-router-dom";
 import PageNum from "./pagenum";
 import Author from "../Pages/Page1_Intro"
 import Navigation from "../Pages/Page2_Navigation";
@@ -12,8 +12,10 @@ import Game1 from "../Pages/Page8_Hangman";
 import Personal from "../Pages/Page9_Personal";
 import './styles.css'
 
-export default function HomePage() 
+export default function HomePage({navigationSelected,setNavigationSelected}) 
 {
+    const navigate =useNavigate()
+    const ids= ['intro','experience','resume','skills','project1','project2','game1','personal']
     const [currentPage, setCurrentPage] = useState(JSON.parse(localStorage.getItem('PageNumber')))
     const [pageAmountForward, setPageAmountForward] = useState(0)
     const [pageAmountReverse, setPageAmountReverse] = useState(0)
@@ -53,6 +55,23 @@ export default function HomePage()
             setPageAmountForward(pageDiffPlus)
         }
     }
+    useEffect(()=>{
+        
+        if(window.innerWidth>768)
+        {
+            NavigatePage(navigationSelected)
+        }
+        else
+        {
+            const element = document.getElementById(ids[navigationSelected-2])
+            if(element)
+            {
+                element.scrollIntoView();
+                setNavigationSelected()
+            }
+        }
+
+    },[navigationSelected])
     useEffect(()=>{
         localStorage.setItem('PageNumber',currentPage)
     },[currentPage])
@@ -257,64 +276,68 @@ export default function HomePage()
     // console.log(pageAmountReverse, 'pageAmountReverse')
     return (
         <>
-            <div className="flex flex-col md:flex-row h-auto">
-                <div className="hidden md:flex flex-col justify-around h-auto mx-auto mt-5 text-center ">
-                    <span className="text-xl md:text-6xl hover:cursor-pointer" onClick={getPrevPage}>&#11160;</span>
-                </div>
-                <div className="gap-5 md:relative flex flex-col md:flex-row md:justify-around md:border-4 md:border-black pb-10 h-[fit] md:h-[90dvh] w-4/5 mx-auto mt-5 text-center rounded-lg ">
-                    <div className="pt-20 border-2 border-black relative flex md:left-0 bg-[#ffebcd] w-[100%] h-[90dvh] md:absolute md:w-[50%] md:h-[100%] flex justify-center items-center">
-                        {pageElements[0]}
-                        <div className="absolute bottom-0 w-full">
-                            <div className="flex flex-row">
-                                <h1 className="hidden md:block w-[50%] self-center text-right">1</h1>
-                                <div className="md:hidden">
-                                    {<PageNum num={1}/>}
-                                </div>
-                            </div> 
+            <div className="h-[100dvh] bg-[url('https://getwallpapers.com/wallpaper/full/b/f/0/1202616-gorgerous-old-time-wallpaper-1920x1200.jpg')] bg-no-repeat bg-cover">
+                <div className="pt-10 flex flex-col md:flex-row h-[90dvh] overflow-y-scroll scroll-pb-20">
+                    <div className="hidden md:flex flex-col justify-around h-auto mx-auto mt-5 text-center ">
+                        <span className="text-xl md:text-6xl hover:cursor-pointer" onClick={getPrevPage}>&#11160;</span>
+                    </div>
+                    <div className="gap-5 relative flex flex-col md:flex-row md:justify-around md:border-4 md:border-black pb-10 h-[100dvh] md:h-[80dvh] w-4/5 mx-auto mt-5 text-center rounded-lg ">
+                        <div id='cover' className=" hidden md:block pt-20 border-2 border-black flex md:-left-15 md:-top-5 bg-[url('https://storage.googleapis.com/webdesignledger.pub.network/LaT/edd/2016/02/old-book-cover-texture-15.jpg')] bg-no-repeat bg-cover w-[100%] h-[90dvh] md:absolute md:w-[110%] md:h-[105%]">
+                        </div>
+                        <div id="intro" className="pt-10 border-2 border-black relative flex md:left-0 bg-[url('https://archive.org/services/img/historiadellacit02summ_0/full/pct:200/0/default.jpg')] w-[100%] h-[100%] md:absolute md:w-[50%] md:h-[100%] flex justify-center items-center">
+                            {pageElements[0]}
+                            <div className="absolute bottom-0 w-full">
+                                <div className="flex flex-row">
+                                    <h1 className="hidden md:block w-[50%] self-center text-right">1</h1>
+                                    <div className="block md:hidden">
+                                        {<PageNum num={1}/>}
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div className={`absolute bottom-0 hidden md:flex md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${firstTransformed ? 'flipped': 'normal'}`} style={{zIndex: firstPageDisplayIndex}} >
+                            {pageElements[1]}
+                            {<PageNum num={2}/>}
+                        </div>
+                        <div id="experience" className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${secondTransformed ? 'flipped': 'normal'}`} style={{zIndex: secondPageDisplayIndex}}>
+                            {pageElements[2]}
+                            {<PageNum num={3}/>}
+                        </div>
+                        <div id="resume" className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${thirdTransformed ? 'flipped': 'normal'}`} style={{zIndex: thirdPageDisplayIndex}}>
+                            {pageElements[3]}
+                            {<PageNum num={4}/>}
+                        </div>
+                        <div id="skills">
+                            <div className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${fourthTransformed ? 'flipped': 'normal'}`} style={{zIndex: fourthPageDisplayIndex}}>
+                                {pageElements[4]}
+                                {<PageNum num={5}/>}
+                            </div>
+                        </div>
+                        <div id="project1" className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${fifthTransformed ? 'flipped': 'normal'}`} style={{zIndex: fifthPageDisplayIndex}}>
+                            {pageElements[5]}
+                            {<PageNum num={6}/>}
+                        </div>
+                        <div id="project2" className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${sixthTransformed ? 'flipped': 'normal'}`} style={{zIndex: sixthPageDisplayIndex}}>
+                            {pageElements[6]}
+                            {<PageNum num={7}/>}
+                        </div>
+                        <div id="game1" className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${seventhTransformed ? 'flipped': 'normal'}`} style={{zIndex: seventhPageDisplayIndex}}>
+                            {pageElements[7]}
+                            {<PageNum num={8}/>}
+                        </div>
+                        <div id="personal" className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${eighthTransformed ? 'flipped': 'normal'}`} style={{zIndex: eighthPageDisplayIndex}}>
+                            {pageElements[8]}
+                            {<PageNum num={9}/>}
+                        </div>
+                        <div className={`absolute h-[50%] w-[100%] hidden md:flex md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] normal`} style={{zIndex: 0}}>
+                            <h1 className="text-xl md:text-6xl pb-[15px] md:pb-[150px]">THE END</h1>
+                            {pageElements[1]}
+                            {<PageNum num={10}/>}
                         </div>
                     </div>
-                    <div className={`absolute bottom-0 hidden md:flex md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${firstTransformed ? 'flipped': 'normal'}`} style={{zIndex: firstPageDisplayIndex}} >
-                        {pageElements[1]}
-                        {<PageNum num={2}/>}
+                    <div className="hidden md:flex flex-col justify-around h-[90dvh] mx-auto mt-5 text-center align-middle">
+                        <span className="nextButton text-xl md:text-6xl hover:cursor-pointer" onClick={getNextPage}>&#11162;</span>
                     </div>
-                    <div className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${secondTransformed ? 'flipped': 'normal'}`} style={{zIndex: secondPageDisplayIndex}}>
-                        {pageElements[2]}
-                        {<PageNum num={3}/>}
-                    </div>
-                    <div className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${thirdTransformed ? 'flipped': 'normal'}`} style={{zIndex: thirdPageDisplayIndex}}>
-                        {pageElements[3]}
-                        {<PageNum num={4}/>}
-                    </div>
-                    <div className="skills">
-                        <div className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${fourthTransformed ? 'flipped': 'normal'}`} style={{zIndex: fourthPageDisplayIndex}}>
-                            {pageElements[4]}
-                            {<PageNum num={5}/>}
-                        </div>
-                    </div>
-                    <div className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${fifthTransformed ? 'flipped': 'normal'}`} style={{zIndex: fifthPageDisplayIndex}}>
-                        {pageElements[5]}
-                        {<PageNum num={6}/>}
-                    </div>
-                    <div className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${sixthTransformed ? 'flipped': 'normal'}`} style={{zIndex: sixthPageDisplayIndex}}>
-                        {pageElements[6]}
-                        {<PageNum num={7}/>}
-                    </div>
-                    <div className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${seventhTransformed ? 'flipped': 'normal'}`} style={{zIndex: seventhPageDisplayIndex}}>
-                        {pageElements[7]}
-                        {<PageNum num={8}/>}
-                    </div>
-                    <div className={`relative flex h-[90dvh] w-[100%] md:absolute md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] ${eighthTransformed ? 'flipped': 'normal'}`} style={{zIndex: eighthPageDisplayIndex}}>
-                        {pageElements[8]}
-                        {<PageNum num={9}/>}
-                    </div>
-                    <div className={`absolute h-[50%] w-[100%] hidden md:flex md:h-[100%] md:w-[50%] md:right-0 bg-[#ffebcd] normal`} style={{zIndex: 0}}>
-                        <h1 className="text-xl md:text-6xl pb-[15px] md:pb-[150px]">THE END</h1>
-                        {pageElements[1]}
-                        {<PageNum num={10}/>}
-                    </div>
-                </div>
-                <div className="hidden md:flex flex-col justify-around h-[90dvh] mx-auto mt-5 text-center align-middle">
-                    <span className="nextButton text-xl md:text-6xl hover:cursor-pointer" onClick={getNextPage}>&#11162;</span>
                 </div>
             </div>
         </>

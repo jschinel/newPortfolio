@@ -4,7 +4,7 @@ export default function Resume()
 {
     return (
         <>
-            <div className="flex flex-col h-5/6 justify-start w-11/12 bg-white overflow-y-scroll pb-20">
+            <div className="font-normal flex flex-col h-5/6 justify-start w-11/12 bg-white overflow-y-scroll pb-20">
                 <h1 className="pt-5 pb-2 text-2xl">JON SCHINELLA</h1>
                 <div className="flex self-center justify-center w-11/12">
                     <li className="list-none text-center text-sm">Negaunee, MI, 49866 | 517-960-4241 | <a href="mailto:jonschinella@gmail.com">jonschinella@gmail.com</a> | <a href="https://www.linkedin.com/in/jon-schinella/" target="_blank">LinkedIn</a> | <a href="https://github.com/jschinel" target="_blank">GitHub</a></li>

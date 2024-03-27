@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        playfair: ['"Playfair+Display"']
+        storyFont: ["Cormorant Upright", "serif"],
+        oldTime: ["Grenze Gotisch", "serif"],
+        normal: ["Open Sans", "sans-serif"],
       }
     },
   },

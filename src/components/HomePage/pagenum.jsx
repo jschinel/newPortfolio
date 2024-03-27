@@ -4,7 +4,7 @@ export default function PageNum({num})
         <>
             <div className="absolute bottom-0 w-full">
                 <div className="flex flex-row">
-                    <h1 className="w-[50%] self-center text-right">{num}</h1>
+                    <h1 className="w-[50%] self-center text-xl text-right">{num}</h1>
                     <div className="flex w-[50%] h-[full] justify-end ">
                         <div className=" flex w-[65%] h-[full] justify-end gap-1 md:gap-3 sm:w-[50%] sm:gap-2 md:w-[60%] lg:w-[50%]">
                             <a className="" href="https://www.linkedin.com/in/jon-schinella/" target="_blank">

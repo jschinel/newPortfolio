@@ -4,7 +4,7 @@ export default function Experience()
 {
     return (
         <>
-            <div className="flex flex-col h-[70dvh] w-full justify-start overflow-y-scroll font-playfair">
+            <div className="flex flex-col h-[80%] w-full justify-start overflow-y-scroll">
                 <div className="text-left px-5 pt-10">
                     <h1 className="text-2xl pb-5 bold underline">Software Development</h1>
                     <p>Over the past 3-4 months I have fully engulfed myself within the software development world and now I have a number of projects that showcase the skills I have gathered during my time at General Assembly. My passion for software development started off in college where i became a tutor for embedded systems programming using C language.</p>

@@ -3,7 +3,8 @@
     transition: all 1s;
     display: flex;
     transform-origin: center left;
-    background: h#ffebcd;
+    /* background: h#ffebcd; */
+    background-image: url('https://archive.org/services/img/historiadellacit02summ_0/full/pct:200/0/default.jpg');
     flex-flow: column;
     width:50%;
     justify-content: center;
@@ -21,7 +22,8 @@
     transition: all 1s;
     display: flex;
     transform-origin: center left;
-    background: h#ffebcd;
+    /* background: h#ffebcd; */
+    background-image: url('https://archive.org/services/img/historiadellacit02summ_0/full/pct:200/0/default.jpg');
     flex-flow: column;
     width:50%;
     justify-content: center;
