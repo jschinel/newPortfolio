@@ -4,7 +4,7 @@ export default function Project2()
 {
     return (
         <>
-            <div className="flex flex-col h-full w-full justify-star">
+            <div className="relative flex flex-col h-[90dvh] w-full justify-start">
                 <div className="pt-10 h-5/6 overflow-y-scroll">
                     <a href="https://pitcru-7ee2d75f05d9.herokuapp.com/" target="_blank">
                         <h1 className="text-2xl pb-5 bold underline">PITCRU</h1>

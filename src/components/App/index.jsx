@@ -13,12 +13,14 @@ export default function App() {
     {
        localStorage.setItem('HideMenu','none')
     },[toggleMenu])
-
+    window.addEventListener('resize', ()=> {
+        location.reload();
+    });
 
     //  Create the HTML using JSX for the App component fixing
     return (
         <>
-            <div className='sticky top-0'>
+            <div className='sticky top-0 z-50 '>
                 {toggleMenu==true ? (
                     <>
                     <div className="flex flex-col justify-top items-center absolute right-0 top-[6.5dvh] bg-[white] w-[10%] h-fit list-none text-black font-bold text-sm">

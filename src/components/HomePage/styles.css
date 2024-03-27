@@ -17,6 +17,7 @@
     }
 }
 .normal{
+    --tw-translate-y: 0;
     transition: all 1s;
     display: flex;
     transform-origin: center left;
@@ -32,3 +33,4 @@
         opacity: 100;
     }
 }
+

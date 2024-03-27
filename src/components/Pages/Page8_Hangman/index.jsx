@@ -4,8 +4,8 @@ export default function Game1()
 {
     return (
         <>
-            <div className="flex flex-col h-full w-full justify-start">
-            <div className="pt-10 h-5/6 overflow-y-scroll">
+            <div className="relative flex flex-col h-[90dvh] w-full justify-start">
+                <div className="pt-10 h-5/6 overflow-y-scroll">
                     <a href="https://jschinel.github.io/hangman/" target="_blank">
                         <h1 className="text-2xl pb-5 bold underline">Hangman</h1>
                     </a>
