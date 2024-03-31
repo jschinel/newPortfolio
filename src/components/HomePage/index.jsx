@@ -279,7 +279,7 @@ export default function HomePage({navigationSelected,setNavigationSelected})
             <div className="h-[100dvh] bg-[url('https://getwallpapers.com/wallpaper/full/b/f/0/1202616-gorgerous-old-time-wallpaper-1920x1200.jpg')] bg-no-repeat bg-cover">
                 <div className="pt-10 flex flex-col md:flex-row h-[90dvh] overflow-y-scroll scroll-pb-20">
                     <div className="hidden md:flex flex-col justify-around h-auto mx-auto mt-5 text-center ">
-                        <span className="text-xl md:text-6xl hover:cursor-pointer" onClick={getPrevPage}>&#11160;</span>
+                        <span className="text-xl md:text-6xl hover:cursor-pointer text-yellow-100" onClick={getPrevPage}>&#11160;</span>
                     </div>
                     <div className="gap-5 relative flex flex-col md:flex-row md:justify-around md:border-4 md:border-black pb-10 h-[100dvh] md:h-[80dvh] w-4/5 mx-auto mt-5 text-center rounded-lg ">
                         <div id='cover' className=" hidden md:block pt-20 border-2 border-black flex md:-left-15 md:-top-5 bg-[url('https://storage.googleapis.com/webdesignledger.pub.network/LaT/edd/2016/02/old-book-cover-texture-15.jpg')] bg-no-repeat bg-cover w-[100%] h-[90dvh] md:absolute md:w-[110%] md:h-[105%]">
@@ -336,7 +336,7 @@ export default function HomePage({navigationSelected,setNavigationSelected})
                         </div>
                     </div>
                     <div className="hidden md:flex flex-col justify-around h-[90dvh] mx-auto mt-5 text-center align-middle">
-                        <span className="nextButton text-xl md:text-6xl hover:cursor-pointer" onClick={getNextPage}>&#11162;</span>
+                        <span className="nextButton text-xl md:text-6xl hover:cursor-pointer text-yellow-100" onClick={getNextPage}>&#11162;</span>
                     </div>
                 </div>
             </div>
